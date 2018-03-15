@@ -2,7 +2,7 @@
 #define XPARAMETERS_H   /* by using protection macros */
 
 /* Definition for CPU ID */
-#define XPAR_CPU_ID 0
+#define XPAR_CPU_ID 0U
 
 /* Definitions for peripheral PS7_CORTEXA9_0 */
 #define XPAR_PS7_CORTEXA9_0_CPU_CLK_FREQ_HZ 650000000
@@ -23,6 +23,14 @@
 
 /******************************************************************/
 
+/* Platform specific definitions */
+#define PLATFORM_ZYNQ
+ 
+/* Definitions for sleep timer configuration */
+#define XSLEEP_TIMER_IS_DEFAULT_TIMER
+ 
+ 
+/******************************************************************/
 
 /* Definitions for peripheral PS7_DDR_0 */
 #define XPAR_PS7_DDR_0_S_AXI_BASEADDR 0x00100000
@@ -32,20 +40,20 @@
 /******************************************************************/
 
 /* Definitions for driver DEVCFG */
-#define XPAR_XDCFG_NUM_INSTANCES 1
+#define XPAR_XDCFG_NUM_INSTANCES 1U
 
 /* Definitions for peripheral PS7_DEV_CFG_0 */
-#define XPAR_PS7_DEV_CFG_0_DEVICE_ID 0
-#define XPAR_PS7_DEV_CFG_0_BASEADDR 0xF8007000
-#define XPAR_PS7_DEV_CFG_0_HIGHADDR 0xF80070FF
+#define XPAR_PS7_DEV_CFG_0_DEVICE_ID 0U
+#define XPAR_PS7_DEV_CFG_0_BASEADDR 0xF8007000U
+#define XPAR_PS7_DEV_CFG_0_HIGHADDR 0xF80070FFU
 
 
 /******************************************************************/
 
 /* Canonical definitions for peripheral PS7_DEV_CFG_0 */
 #define XPAR_XDCFG_0_DEVICE_ID XPAR_PS7_DEV_CFG_0_DEVICE_ID
-#define XPAR_XDCFG_0_BASEADDR 0xF8007000
-#define XPAR_XDCFG_0_HIGHADDR 0xF80070FF
+#define XPAR_XDCFG_0_BASEADDR 0xF8007000U
+#define XPAR_XDCFG_0_HIGHADDR 0xF80070FFU
 
 
 /******************************************************************/
@@ -182,7 +190,7 @@
 #define XPAR_BUTTONS_BASEADDR 0x41210000
 #define XPAR_BUTTONS_HIGHADDR 0x4121FFFF
 #define XPAR_BUTTONS_DEVICE_ID 0
-#define XPAR_BUTTONS_INTERRUPT_PRESENT 0
+#define XPAR_BUTTONS_INTERRUPT_PRESENT 1
 #define XPAR_BUTTONS_IS_DUAL 0
 
 
@@ -198,7 +206,7 @@
 #define XPAR_SWITCHES_BASEADDR 0x41200000
 #define XPAR_SWITCHES_HIGHADDR 0x4120FFFF
 #define XPAR_SWITCHES_DEVICE_ID 2
-#define XPAR_SWITCHES_INTERRUPT_PRESENT 0
+#define XPAR_SWITCHES_INTERRUPT_PRESENT 1
 #define XPAR_SWITCHES_IS_DUAL 0
 
 
@@ -208,7 +216,7 @@
 #define XPAR_GPIO_0_BASEADDR 0x41210000
 #define XPAR_GPIO_0_HIGHADDR 0x4121FFFF
 #define XPAR_GPIO_0_DEVICE_ID XPAR_BUTTONS_DEVICE_ID
-#define XPAR_GPIO_0_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_0_INTERRUPT_PRESENT 1
 #define XPAR_GPIO_0_IS_DUAL 0
 
 /* Canonical definitions for peripheral MUTE */
@@ -222,7 +230,7 @@
 #define XPAR_GPIO_2_BASEADDR 0x41200000
 #define XPAR_GPIO_2_HIGHADDR 0x4120FFFF
 #define XPAR_GPIO_2_DEVICE_ID XPAR_SWITCHES_DEVICE_ID
-#define XPAR_GPIO_2_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_2_INTERRUPT_PRESENT 1
 #define XPAR_GPIO_2_IS_DUAL 0
 
 
@@ -250,11 +258,15 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_LOGII2S_INTERRUPT_INTR 61U
+#define XPAR_FABRIC_BUTTONS_IP2INTC_IRPT_INTR 61U
+#define XPAR_FABRIC_SWITCHES_IP2INTC_IRPT_INTR 62U
+#define XPAR_FABRIC_LOGII2S_INTERRUPT_INTR 63U
 
 /******************************************************************/
 
 /* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_GPIO_0_VEC_ID XPAR_FABRIC_BUTTONS_IP2INTC_IRPT_INTR
+#define XPAR_FABRIC_GPIO_2_VEC_ID XPAR_FABRIC_SWITCHES_IP2INTC_IRPT_INTR
 
 /******************************************************************/
 

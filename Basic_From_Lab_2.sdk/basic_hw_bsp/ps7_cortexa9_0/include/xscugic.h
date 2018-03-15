@@ -1,6 +1,6 @@
 /******************************************************************************
 *
-* Copyright (C) 2010 - 2015 Xilinx, Inc.  All rights reserved.
+* Copyright (C) 2010 - 2018 Xilinx, Inc.  All rights reserved.
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,7 @@
 /**
 *
 * @file xscugic.h
-* @addtogroup scugic_v3_1
+* @addtogroup scugic_v3_8
 * @{
 * @details
 *
@@ -168,6 +168,18 @@
 *                     generation.
 * 3.7   ms   04/11/17 Modified tcl file to add suffix U for all macro
 *                     definitions of scugic in xparameters.h
+* 3.8   mus  07/05/17 Updated scugic.tcl to add support for intrrupts connected
+*                     through util_reduced_vector IP(OR gate)
+*       mus  07/05/17 Updated xdefine_zynq_canonical_xpars proc to initialize
+*                     the HandlerTable in XScuGic_ConfigTable to 0, it removes
+*                     the compilation warning in xscugic_g.c. Fix for CR#978736.
+*       mus  07/25/17 Updated xdefine_gic_params proc to export correct canonical
+*                     definitions for pl to ps interrupts.Fix for CR#980534
+* 3.9   mus  02/21/18 Added new API's XScuGic_UnmapAllInterruptsFromCpu and
+*                     XScuGic_InterruptUnmapFromCpu, These API's can be used
+*                     by applications to unmap specific/all interrupts from
+*                     target CPU.
+*
 * </pre>
 *
 ******************************************************************************/
@@ -332,6 +344,8 @@ void XScuGic_GetPriorityTriggerType(XScuGic *InstancePtr, u32 Int_Id,
 void XScuGic_SetPriorityTriggerType(XScuGic *InstancePtr, u32 Int_Id,
 					u8 Priority, u8 Trigger);
 void XScuGic_InterruptMaptoCpu(XScuGic *InstancePtr, u8 Cpu_Id, u32 Int_Id);
+void XScuGic_InterruptUnmapFromCpu(XScuGic *InstancePtr, u8 Cpu_Id, u32 Int_Id);
+void XScuGic_UnmapAllInterruptsFromCpu(XScuGic *InstancePtr, u8 Cpu_Id);
 void XScuGic_Stop(XScuGic *InstancePtr);
 void XScuGic_SetCpuID(u32 CpuCoreId);
 u32 XScuGic_GetCpuID(void);

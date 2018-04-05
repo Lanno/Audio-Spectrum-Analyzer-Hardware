@@ -46,9 +46,19 @@
 			<locationURI>PARENT-3-PROJECT_LOC/Source/SW/Audio_Tester/include/audio.hpp</locationURI>
 		</link>
 		<link>
+			<name>include/i2c.h</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Source/SW/Audio_Tester/include/i2c.h</locationURI>
+		</link>
+		<link>
 			<name>source/audio.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-3-PROJECT_LOC/Source/SW/Audio_Tester/source/audio.cpp</locationURI>
+		</link>
+		<link>
+			<name>source/i2s.c</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Source/SW/Audio_Tester/source/i2s.c</locationURI>
 		</link>
 		<link>
 			<name>source/main.cpp</name>

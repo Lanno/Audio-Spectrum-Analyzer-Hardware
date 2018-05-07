@@ -51,6 +51,11 @@
 			<locationURI>PARENT-3-PROJECT_LOC/Source/SW/Audio_Tester/include/i2c.h</locationURI>
 		</link>
 		<link>
+			<name>include/serial_comm.hpp</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Source/SW/Audio_Tester/include/serial_comm.hpp</locationURI>
+		</link>
+		<link>
 			<name>source/audio.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-3-PROJECT_LOC/Source/SW/Audio_Tester/source/audio.cpp</locationURI>
@@ -64,6 +69,11 @@
 			<name>source/main.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-3-PROJECT_LOC/Source/SW/Audio_Tester/source/main.cpp</locationURI>
+		</link>
+		<link>
+			<name>source/serial_comm.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Source/SW/Audio_Tester/source/serial_comm.cpp</locationURI>
 		</link>
 		<link>
 			<name>xylon/logii2s.c</name>

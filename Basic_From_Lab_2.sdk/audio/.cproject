@@ -33,12 +33,12 @@
 							<tool id="xilinx.gnu.armv7.cxx.toolchain.compiler.debug.2027466136" name="ARM v7 g++ compiler" superClass="xilinx.gnu.armv7.cxx.toolchain.compiler.debug">
 								<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.159584699" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.option.debugging.level.1086238297" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
-								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.1891146264" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath"/>
+								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.1891146264" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes"/>
 								<option id="xilinx.gnu.compiler.misc.other.10307758" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard" valueType="string"/>
 								<option id="xilinx.gnu.compiler.dircategory.includes.1179150914" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../basic_hw_bsp/ps7_cortexa9_0/include"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Users\noluc_000\CSULB\CECS_Spring_2018\CECS561\Final_Project\Source\SW\LogiBricks_I2S_Driver\kernel_src\sound\drivers\xylon&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\Users\noluc_000\CSULB\CECS_Spring_2018\CECS561\Final_Project\Source\SW\Audio_Tester\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Users\noluc_000\CSULB\CECS_Spring_2018\CECS561\Final_Project\Source\SW\Audio\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Users\noluc_000\CSULB\CECS_Spring_2018\CECS561\Final_Project\Source\SW\nlohmann-json\single_include\nlohmann&quot;"/>
 								</option>
 								<inputType id="xilinx.gnu.armv7.cxx.compiler.input.1237981606" name="C++ source files" superClass="xilinx.gnu.armv7.cxx.compiler.input"/>
@@ -183,4 +183,5 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.xilinx.managedbuilder.ui.ARMA53X32GCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>
